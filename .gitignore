@@ -1,0 +1,8 @@
+*.bak
+*~
+trash
+.DS_Store
+.rbenv-version
+logs*
+.sass-cache
+.bundle

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<title>TV Eye</title>
+
+  <link href="/application.css" media="all" rel="stylesheet" type="text/css" />
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+  <script>
+
+    $(document).ready(function() {
+
+      $('#show_hide_link').on('click', function(e){
+        e.preventDefault();
+        if($('#show_hide_block').css('display') == 'none'){
+          $('#show_hide_block').show();
+        } else {
+          $('#show_hide_block').hide();
+        }
+      });
+    });
+
+  </script>
+</head>
+
+<body class='video-background' style='color: #fff'>
+
+<div class='header'>
+   <a href="/" class="web-apprentice-logo">TV Eye</a>
+   <br>
+<img src="eye.png" />
+</div>
+
+
+
+<div class='main'>
+  Just the Video - Nothing Else
+  <br> &nbsp; <br>&nbsp; <br>
+  Pages on YouTube are full of comments, related videos and such
+  <br> <br>
+   TV Eye lets you watch the same videos without the clutter
+  <br/>
+  <br/>
+
+</div>
+
+
+<div>
+<p> &nbsp; </p>
+
+<table style='text-align: center; margin-left: auto; margin-right: auto'>
+  <tr>
+    <td>YouTube</td>
+    <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+    <td>TV Eye</td>
+  </tr>
+  <tr>
+    <td>
+  <img src="video_in_youtube.png" class='screenshot' />
+  </td>
+  <td>versus
+
+  </td>
+  <td>
+    <img src="video_in_tveye.png" class='screenshot' />
+  </td>
+  </tr>
+</table>
+</div>
+
+<p> &nbsp; </p>
+
+<div class='main'>
+
+<table style='text-align: left; margin-left: auto; margin-right: auto'>
+<tr><td>1: Find the video you want on <a href="https://youtube.com">YouTube</a></td></tr>
+<tr><td> &nbsp; </td></tr>
+<tr><td>2: Copy its URL from your browser
+  &nbsp; &nbsp;
+  <a href='#' id='show_hide_link'>How ?</a>
+
+<div id='show_hide_block'>
+<br>
+You can copy the URL in the top panel of your browser or<br>
+Right-Click in the video panel, select 'Get video URL' <br>
+and copy that text <br>
+<br>
+<img src="url_instructions.png" />
+</div>
+</td></tr>
+<tr><td> &nbsp; </td></tr>
+<tr><td>3: Paste the URL in this box</td></tr>
+</table>
+<br>
+<form action="/watch" method="get">
+
+<input name='v'  type="text"  class='text-input'>
+<br>
+<br>
+and <input type="submit" value=" GO ! " id='submit' style="font-size: 16px">
+
+</form>
+
+<br> <br>
+
+  <br>
+  <br>
+You can send a link to a TV Eye page to your friends
+<br> <br>
+They get to enjoy the video with no spoilers or nasty comments
+
+  <br/>
+  <br/>
+
+</div>
+
+
+
+
+<div class='main'>
+  <br/> <br/>
+  <a href="/about">About TV Eye</a>
+  <br/> <br/>
+  This site is NOT affiliated with <a href="https://google.com">Google&trade;</a> or
+<a href="https://youtube.com">YouTube&trade;</a>
+</div>
+
+</body>
+</html>

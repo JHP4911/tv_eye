@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>TV Eye</title>
+  <link href="/application.css" media="all" rel="stylesheet" type="text/css" />
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+  <script>
+
+    $(document).ready(function() {
+
+      $('#show_hide_link').on('click', function(e){
+        e.preventDefault();
+        if($('#show_hide_block').css('display') == 'none'){
+          $('#show_hide_block').show();
+        } else {
+          $('#show_hide_block').hide();
+        }
+      });
+    });
+
+  </script>
+
+</head>
+
+<body>
+
+
+<div class='corner'>
+<a href="/">TV Eye</a>
+<br>
+<img src="eye.png" />
+</div>
+
+<br/>&nbsp;<br/>
+<div style='color: #fff; text-align: center'>
+
+
+<% if @youtube_id =~ /^\s*$/ %>
+  <div class='error'>You did not enter a YouTube ID - please try again</div>
+<% elsif @youtube_id.length < 11 %>
+  <div class='error'>You did not enter a valid YouTube ID - please try again</div>
+<% else %>
+<iframe width="640" height="390" src="https://www.youtube.com/embed/<%= @youtube_id %>" frameborder="0" allowfullscreen></iframe>
+<% end %>
+
+</div>
+
+
+
+<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>
+
+<div style='color: #fff; text-align: center'>
+
+<br/>
+<div id='show_hide_link'>
+<a href='#'>Share this video with a friend</a>
+</div>
+
+<!-- display a hidden div -->
+<div id='show_hide_block'>
+<br/> <br/>
+Copy and Paste this URL into an email
+<br/> <br/>
+
+<span style="color: #d80; font-size:18px">http://localhost:4567/watch?v=<%= @youtube_id %></span>
+<br> <br/>
+When your friend clicks on the link they will come directly to this page
+
+</div>
+
+
+<br/> <br/> <br>
+<a href="https://youtube.com/watch?v=<%= @youtube_id %>">Watch it on the YouTube site</a>
+
+<br/>
+
+
+</div>
+
+<div class='disclaimer'>
+  This site is NOT affiliated with <a href="https://google.com">Google&trade;</a> or
+<a href="https://youtube.com">YouTube&trade;</a>
+</div>
+
+
+
+</body>
+</html>
