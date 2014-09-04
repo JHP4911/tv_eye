@@ -1,12 +1,20 @@
-Title and info on a YouTube page can often spoil the 'surprise' of a video that you want to share with a friend
+TV Eye is a simple wrapper around YouTube videos
 
-Embedding the video gets around this, but that is a pain
+A typical video page on youtube.com is cluttered with description, comments and related videos
 
-This application shows a youtube video with no additional comments etc
+They get in the way of just watching the video and can sometimes spoil the whole
+experience.
 
-You can email a link to the video in this format
+TV Eye takes a YouTube video id and uses it to embed the target video in a simple
+web page with a plain grey background. In doing so it eliminates all the clutter
+of the youtube.com site.
 
+You can send a link to a friend so they can view the TV Eye wrapped version directly.
 
-? issue with the number of embeds ?
+TV Eye is not affiliated with YouTube or Google in any way.
+
+The code was written by Rob Jones (jones@craic.com) and is distributed freely under the
+terms of the MIT license.
+
 
 
